@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html xmlns:madcap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us" data-mc-search-type="Stem" data-mc-help-system-file-name="Default.xml" data-mc-path-to-help-system="../../" data-mc-target-type="WebHelp2" data-mc-runtime-file-type="Topic;Default" data-mc-preload-images="false" data-mc-in-preview-mode="false" data-mc-toc-path="" style="" class="js no-touch svg inlinesvg svgclippaths no-ie8compat" lang="en-us"><head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta content="This topic describes how to animate widgets in a container." name="description">
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="author" content=""><title data-title="Timeline Component">Timeline Component</title>
+        <script>/* <![CDATA[ */
+function copyFunction(codeText, button)
+{
+	const copyText = codeText;
+	const textArea = document.createElement('textarea');
+	textArea.textContent = copyText;
+	document.body.append(textArea);
+	textArea.select();
+	document.execCommand("copy");
+	document.body.removeChild(textArea);
+	button.value = "Copied";
+	button.className = "btnOnClick";
+	window.setTimeout(function(){ button.value = "Copy"; button.className = "btn"},2000);
+}
+		/* ]]> */</script>
+        <link href="Timeline%20Component_files/Slideshow.css" rel="stylesheet" data-mc-generated="True">
+        <link href="Timeline%20Component_files/TextEffects.css" rel="stylesheet" data-mc-generated="True">
+        <link href="Timeline%20Component_files/Topic.css" rel="stylesheet" data-mc-generated="True">
+        <link href="Timeline%20Component_files/Styles.css" rel="stylesheet" data-mc-generated="True">
+        <link href="Timeline%20Component_files/Tablet.css" rel="stylesheet" data-mc-generated="True">
+        <link href="Timeline%20Component_files/Mobile.css" rel="stylesheet" data-mc-generated="True">
+        <link href="Timeline%20Component_files/MainStyles.css" rel="stylesheet">
+        <script src="Timeline%20Component_files/custom.js">
+        </script>
+        <script src="Timeline%20Component_files/jquery.js">
+        </script>
+        <script src="Timeline%20Component_files/require.js">
+        </script>
+        <script src="Timeline%20Component_files/require_002.js">
+        </script>
+        <script src="Timeline%20Component_files/foundation.js">
+        </script><meta class="foundation-mq-small"><meta class="foundation-mq-medium"><meta class="foundation-mq-large"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-xxlarge"><style></style>
+        <script src="Timeline%20Component_files/plugins.js">
+        </script>
+        <script src="Timeline%20Component_files/MadCapAll.js">
+        </script>
+        <script src="Timeline%20Component_files/prettify.js">
+        </script>
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="../../Data/Breakpoints.js" src="Timeline%20Component_files/Breakpoints.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="../../Data/Language.js" src="Timeline%20Component_files/Language.js"></script></head>
+    <body>
+        <img src="Timeline%20Component_files/onLoad.png" onload="prettyPrint();">
+        <div class="content">
+            <div id="contentBody">
+                <div class="row collapse">
+                    <div class="ContentRow" xmlns="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                        <div>
+                            <h1 xmlns="">Timeline Component</h1>
+                            <p xmlns=""> The TimeLine Component is a 
+Visualizer component for showing the events of a single day or multiple 
+days in a single view of the application.</p>
+                            <p xmlns="">
+                                <img src="Timeline%20Component_files/timeline_intro.htm">
+                            </p>
+                            <p xmlns="">As shown in the screenshot, the 
+component can be split into three vertical strips. The left most strip 
+contains the date, the center strip contains the time of day, and the 
+right one contains the basic metadata of the event. In case of a Speaker
+ Series event in an Events App, the right most strip can contain the 
+event title, presenter name, and a short description for individual 
+sessions.</p>
+                            <h2 xmlns="">Use Case</h2>
+                            <p xmlns="">You can use the TimeLine component for a variety of scenarios. Some generic use cases are mentioned below.</p>
+                            <h3 xmlns="">Event Schedule</h3>
+                            <p xmlns="">This typical use case pertains 
+to showing the events of a single day or multiple days on a single page 
+in a mobile app. The view contains dates on the left edge of the screen,
+ a vertical line with bubbles containing the time of the event for the 
+particular date. Some event metadata such as event title, event 
+presenter, and the location can be present on the right side of the 
+line. The right side of the component, where the event metadata is 
+present, can be customized based on the apps requirements.</p>
+                            <h3 xmlns="">Travel Itinerary Plan</h3>
+                            <p xmlns="">Another typical use case might be in a travel app.</p>
+                            <p xmlns="">An end user can take a tour 
+package for an 8 to 10 day holiday. In this case, the layout of the 
+component can be very convenient for the user to view the brief plan 
+laid out in a single view inside the app. Once the user confirms a 
+holiday package booking, they can see the detailed breakdown of all the 
+contents of the package by means of this component window. The view can 
+contain the detailed plan for each day, along with times for every tour 
+in the day.</p>
+                            <p xmlns="">For example, if the holiday starts on <b>12th March</b> from the user's source location, then the plan for <b>12th</b> and <b>13th March</b> can be as follows.</p>
+                            <p xmlns="">12th March - 0600 PM - Start from source X<br>12th March - 0800 PM - Arrive at destination Y, check in to Hotel ABC<br>13th March - 1000 AM - Start for sightseeing point 1<br>13th March - 0100 PM - Halt for lunch<br>13th March - 0230 PM - Start for sightseeing point 2<br>13th March - 0630 PM - Arrive at hotel</p>
+                            <h3 xmlns="">Workout or Daily Planner App</h3>
+                            <p xmlns="">The daily planner or workout monitoring apps can use this component to set a layout a schedule for the day.</p>
+                            <p xmlns="">Any app, using the calendar 
+events can also use this component for putting the calendar events for a
+ day, or span of days, in a single view. In a scheduler app, once you 
+create your to do list for the day, this component can track the 
+activities for the day.</p>
+                            <p xmlns="">Similarly in a workout planning 
+app, if a schedule for your daily workout regime is fixed by an admin. 
+The user can quickly glance over the schedule for the day. For this kind
+ of use case, one can also put a check box on the extreme right of the 
+view, with its rendering being optional, for the user to strike out 
+tasks they already completed.</p>
+                            <p xmlns="">The following sections help you use the TimeLine component in your app.</p>
+                            
+                            <h2 xmlns=""><a name="Prerequi"></a>Prerequisites</h2>
+                            <p xmlns="">Before you start using the TimeLine component, ensure you have the following:</p>
+                            <ul xmlns="">
+                                <li value="1"><a href="https://manage.kony.com/" target="_blank">Quantum account</a>
+                                </li>
+                                <li value="2">Quantum Visualizer</li>
+                            </ul>
+                            <h2 xmlns=""><a name="Importin"></a>Importing the  TimeLine Component</h2>
+                            <p xmlns=""> You can import the Forge components only into the apps that are of the Reference Architecture type.</p>
+                            <p xmlns=""><b>To import the TimeLine component, do the following:</b>
+                            </p>
+                            <ol xmlns="">
+                                <li value="1">Open your app project in Quantum Visualizer.</li>
+                                <li value="2">On the <b>File</b> menu, point to <b>Import</b>, and click <b>Component</b>. The <b>Open</b> dialog appears.</li>
+                                <li value="3">Navigate to the location where you have downloaded the component (zip file) on your computer, select the component, and click <b>Open</b>. The <b>Import Forge Item</b> dialog appears.</li>
+                                <li value="4">In the <b>Library Name</b> box, type a name if you want to create a new library. Otherwise, you can select the existing library name</li>
+                                <li value="5">In the <b>Collection Name</b> box, type a name if you want to create a new collection. Otherwise, you can select the existing collection name.</li>
+                                <li value="6">In the <b>Component Name</b> box, the <b>com.konymp.TimeLine</b> name is displayed by default. If you want, you can rename it.</li>
+                            </ol>
+                            <p xmlns="">When you import a component, the
+ component is imported to Visualizer's workspace, but not directly into 
+your app. Thus, after you import a component, you must add the component
+ to your app.</p>
+                            <h2 xmlns=""><a name="Adding"></a>Adding a TimeLine Component into your App</h2>
+                            <p xmlns="">You can add an TimeLine component only to FlexForms.</p>
+                            <p xmlns=""><b>To add a TimeLine component, do the following:</b>
+                            </p>
+                            <ol xmlns="">
+                                <li value="1">Open your app, and then open the form to which you want to add the component.</li>
+                                <li value="2">On the <b>My Libraries</b> tab, select the defined Forge library from the drop-down list in which the component exists.</li>
+                                <li value="3">From the <b>Collections</b>
+ tab, drag the component onto the form on the Visualizer canvas. The 
+component will be added to the form.  You will also see a new element, <b>Reusable.TimeLine</b>, under the <b>Components</b> section on the <b>Templates</b> tab.<br></li>
+                            </ol>
+                            <p class="Note" xmlns=""><b>Note:</b>
+Ensure that the component is set to occupy 100 percent width of the 
+device. You can achieve this by setting the width of the parent widget 
+to 100 percent.
+<br></p>
+                            <p xmlns="">After adding a component to a form, you can configure the component the way you want it using the <b>Look</b>, <b>Skin</b>, and <b>Action</b> tabs on the <b>Properties</b> pane.  Configuring the properties on the <b>Properties</b> pane is similar to configuring the properties of any widget in Quantum Visualizer. For more information, refer to <a href="http://docs.kony.com/konylibrary/visualizer/visualizer_user_guide/Default.htm#Button.htm" target="_blank">Button Widget</a>. </p>
+                            <p xmlns="">You can also see that a new <b>Component</b> tab, is added on the <b>Properties</b> pane. The <b>Component</b>
+ tab contains assorted properties relevant to the component that allows 
+you to customize the component as required. The properties on the <b>Component</b> tab are categorized as <b>General</b>, <b>Color</b>, <b>Image</b>, and <b>Skin</b> properties.</p>
+                            <p class="Note" xmlns=""><b>Note:</b>
+Changes made to the <b>Custom</b> properties get reflected only during run time, but not during design time, that is, on the Visualizer Canvas.
+<br></p>
+                            <p xmlns="">You can also add an <b>TimeLine</b> component dynamically. To do so:</p>
+                            <ol xmlns="">
+                                <li value="1">In the <b>Project Explorer</b>, on the <b>Projects</b> tab, click <b>Controllers</b> section to access the respective <b>formController</b>. Create a method and implement the code snippet similar to the sample code mentioned below.<p>In the code snippet, you can edit the properties of the component as per your requirement. For more information, see <a href="#Properti">Setting Properties</a>.</p><pre>/* Creating a component's Object */
+
+var TimeLine = new Reusable.TimeLine(
+
+{
+
+	"clipBounds": true,
+
+	"height": "100%",
+
+	"id": " TimeLine ",
+
+	"isVisible": true,
+
+	"left": "0dp",
+
+	"top": "0dp",
+
+	"width": "100%",
+
+	"zIndex": 1
+
+}, {}, {});
+
+
+
+TimeLine. eventTitle =  Title Of the Event 
+
+TimeLine.masterdata =
+
+{
+
+"data":
+
+[
+
+{
+
+	"date": "2017-02-01T11:30AM ",
+
+	"desc": "",
+
+	"name": "Session1",
+
+	"sub1": "",
+
+	"sub1icon": "",
+
+	"sub2": "",
+
+	"sub2icon": ""
+
+}
+
+]
+
+
+
+/*Adding the TimeLine component to a Form*/
+
+this.view.add(TimeLine);</pre></li>
+                                <li value="2"><b>Save</b> the file.</li>
+                            </ol>
+                            <h2 xmlns=""><a name="Properti"></a>Setting Properties</h2>
+                            <p xmlns="">The properties provided on the <b>Component</b> tab allow you to customize the UI elements in the <b>TimeLine</b> component. You can set the properties directly on the <b>Component</b> tab or by writing a JavaScript.</p>
+                            <div class="MCDropDown dropDown MCDropDown_Closed" xmlns="" data-mc-state="closed"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="Timeline%20Component_files/transparent.gif" alt="Closed" data-mc-alt2="Open" width="16" height="11">Master Data</a></span>
+                                <div class="MCDropDownBody dropDownBody" style="display: none;">
+                                    <table class="table-dropdown">
+                                        <colgroup><col style="width: 150px;">
+                                        <col style="width: 569px;">
+                                        </colgroup><tbody>
+                                            <tr>
+                                                <td><b>Category:</b>
+                                                </td>
+                                                <td>Custom</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Description:</b>
+                                                </td>
+                                                <td>Specifies the list of data sources to the TimeLine.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <madcap:dropdownhotspot style="font-weight: bold;">Syntax:</madcap:dropdownhotspot>
+                                                </td>
+                                                <td><code class="codefirst">masterData</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Type:</b>
+                                                </td>
+                                                <td>Data Grid</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Read/Write:</b>
+                                                </td>
+                                                <td>
+                                                    <p>Write<br></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Example:</b>
+                                                </td>
+                                                <td><pre>this.view.componentID.masterdata =
+
+{
+
+	data:
+
+	[
+
+	{
+
+	"date": "2017-02-01T11:30AM ",
+
+	"desc": "",
+
+	"name": "session1",
+
+	"sub1": "",
+
+	"sub1icon": "",
+
+	"sub2": "",
+
+	"sub2icon": ""
+
+	}, {}
+
+	]
+
+}</pre>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="MCDropDown dropDown MCDropDown_Closed" xmlns="" data-mc-state="closed"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="Timeline%20Component_files/transparent.gif" alt="Closed" data-mc-alt2="Open" width="16" height="11">Event Title</a></span>
+                                <div class="MCDropDownBody dropDownBody" style="display: none;">
+                                    <table class="table-dropdown">
+                                        <colgroup><col style="width: 150px;">
+                                        <col style="width: 569px;">
+                                        </colgroup><tbody>
+                                            <tr>
+                                                <td><b>Category:</b>
+                                                </td>
+                                                <td>Pass Through</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Description:</b>
+                                                </td>
+                                                <td>Specifies the title of the TimeLine.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <madcap:dropdownhotspot style="font-weight: bold;">Syntax:</madcap:dropdownhotspot>
+                                                </td>
+                                                <td><code class="codefirst">eventTitle</code>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Type:</b>
+                                                </td>
+                                                <td>String</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Read/Write:</b>
+                                                </td>
+                                                <td>
+                                                    <p>Read + Write<br></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Example:</b>
+                                                </td>
+                                                <td><pre>this.view.componentID.eventTitle = "Title of the Event";</pre>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <h2 xmlns=""><a name="APIs"></a>APIs</h2>
+                            <p xmlns="">The following  API pertains to the <b>TimeLine</b> component.</p>
+                            <div class="MCDropDown dropDown MCDropDown_Closed" xmlns="" data-mc-state="closed"><span class="MCDropDownHead dropDownHead"><a href="javascript:void(0);" class="MCDropDownHotSpot dropDownHotspot MCDropDownHotSpot_"><img class="MCDropDown_Image_Icon" src="Timeline%20Component_files/transparent.gif" alt="Closed" data-mc-alt2="Open" width="16" height="11">setData</a></span>
+                                <div class="MCDropDownBody dropDownBody" style="display: none;">
+                                    <p>This API sets the data to the TimeLine. You need to give the input data as a parameter.</p>
+                                    <p><b>Syntax</b>
+                                    </p>
+                                    <p><code class="codefirst">setData(data)</code>
+                                    </p>
+                                    <p><b>Parameters</b>
+                                    </p>
+                                    <p>
+                                        </p><p><i>data [JSON]</i>
+                                            <br><i>The data that you want to insert into the TimeLine.</i>
+                                        </p>
+                                    <p></p>
+                                    <p><b>Return Value</b>
+                                    </p>
+                                    <p>
+                                        </p><p>None</p>
+                                    <p></p>
+                                    <p><b>Sample Input Format</b>
+                                    </p>
+                                    <p></p><pre>{
+
+ title  : &lt;TITLE&gt;,
+
+
+
+TimeLineList:
+
+[
+
+{
+
+	"name" : &lt;NAME&gt; , (Mandatory)
+
+	"sub1" : &lt;SUB HEADING 1&gt;,
+
+	"sub1 icon" : &lt;IMAGE NAME&gt;
+
+	"date" : &lt;DATE&gt;, (Mandatory)
+
+	"sub2" : &lt;SUB HEADING 2&gt;,
+
+	"sub2 icon" : &lt; IMAGE NAME &gt;
+
+	"desc" : &lt;DESCRIPTION&gt;,  
+
+	"thums": &lt;ARRAY OF THUMBNAIL IMAGES&gt;(optional)
+
+	"largeImage" : &lt;ARRAY OF LARGE IMAGES&gt;(optional)
+
+}
+
+]
+
+}</pre>
+                                        <p>In the given JSON format:</p>
+                                        <ul>
+                                            <li value="1"><b>title</b> is a String that specifies the Title of the Event.</li>
+                                            <li value="2"><b>TimeLineList</b> is a JSON Array that represents the number of sessions in an event.</li>
+                                        </ul>
+                                        <br>
+                                        <p>The <b>thumbnail image</b> and <b>large image</b> can be of the <b>src</b>, <b>rawbytes</b>, or <b>base64</b> formats.<br>For example</p><pre>thums:
+
+[
+
+{"src":&lt;image source&gt;},
+
+{"base64":&lt;base64 String&gt;},
+
+{"rawbytes":&lt;image rawbytes&gt;}
+
+]</pre>
+                                        <p>The <b>date</b> should be in the <b>yyyy-mm-ddThh:mm&lt;AM/PM&gt;</b> format. Here, the <b>T</b> represents the separator between the Date and the Time.<br>For example</p>
+                                        <p><code class="codefirst">24th Feb 2018, 11:30 AM</code> should be written as <code class="codefirst">2018-02-24T11:30AM</code>.</p>
+                                    <p></p>
+                                    <p class="Note"><b>Note:</b>
+The TimeLine list should be sorted in the ascending order by date.
+<br></p>
+                                </div>
+                            </div>
+                            <h2 xmlns=""><a name="Limitati"></a>Limitations</h2>
+                            <ul xmlns="">
+                                <li value="1">The initial version of the component does not support landscape mode.</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div style="position:fixed">
+                                <ul class="menu _Skins_SideMenuFixed" xmlns="">
+                                   <li value="1"><a href="#Prerequi">Prerequisites</a>
+                                </li>
+                                <li value="2"><a href="#Importin">Importing the TimeLine Component</a>
+                                </li>
+                                <li value="3"><a href="#Adding">Adding a TimeLine Component into your App</a>
+                                </li>
+                                <li value="4"><a href="#Properti">Setting Properties</a>
+                                </li>
+                                <li value="5"><a href="#APIs">APIs</a>
+                                </li>
+                                <li value="6"><a href="#Limitati">Limitations</a>
+                                </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+</body></html>
