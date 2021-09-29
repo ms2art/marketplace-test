@@ -1,8 +1,10 @@
 # marketplace-test
 
-## Cleanup notes
+## Cleanup notes and questions
 
 (Using ms2art.github.io repo for now, just to test and investigate issues.)
+
+* Should we use absolute or relative links?
  
 * Putting the marketplace HTML files into GitHub in the same folders as those used for the kony files:
 
