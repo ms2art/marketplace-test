@@ -1,6 +1,8 @@
 # marketplace-test
 
-Using https:\//ms2art.github.io for now, just to test and investigate issues.
+## Cleanup notes
+
+(Using ms2art.github.io repo for now, just to test and investigate issues.)
  
 * Putting the marketplace HTML files into GitHub in the same folders as those used for the kony files:
 
