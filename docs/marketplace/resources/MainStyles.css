@@ -1,10 +1,9 @@
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
 /*<meta />*/
 
 /*
 This first section uses the Karbon fonts available locally in the resources/Stylesheets.
 */
-@import url('../prettify/prettify.css');
-@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
 
 @font-face {
   font-family: 'Poppins Regular';
@@ -34,8 +33,6 @@ This first section uses the Karbon fonts available locally in the resources/Styl
   font-weight: 300;
   font-style: normal;
 } 
-
-
 
 /*
    This first section imports the fonts from the Kony servers so that the output properly uses the Karbon fonts.
@@ -555,11 +552,6 @@ ul.SecondLevel
 	list-style-image: url('../Images/Bullet2.png');
 }
 
-ul.ThirdLevel
-{
-	list-style-image: url('../Images/Bullet3.png');
-}
-
 div.sideContent
 {
 	float: right;
@@ -626,7 +618,6 @@ MadCap|popupBody
 
 pre
 {
-	min-height: 30px;
 	background-color: #f1f1f1;
 	border-left-style: solid;
 	border-left-width: 1px;
@@ -641,13 +632,10 @@ pre
 	border-bottom-width: 1px;
 	border-bottom-color: #ddd;
 	mc-hyphenate: never;
-	max-width: 80%;
-	overflow: auto;
 }
 
 pre.prettyprint
 {
-	min-height: 30px;
 	background-color: #f1f1f1;
 	border-left-style: solid;
 	border-left-width: 1px;
@@ -662,32 +650,15 @@ pre.prettyprint
 	border-bottom-width: 1px;
 	border-bottom-color: #ddd;
 	mc-hyphenate: never;
-	max-width: 80%;
-	overflow: auto;
 }
 
 p.Note,
 div.Note
 {
-	background-color: #f2f1f1;
-	background-image: url(../Images/_DocAssets/noteIcon.png);
-	background-repeat: no-repeat;
-	color: #343e48;
-	padding-left: 30px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	border-left-style: solid;
-	border-left-width: 2px;
-	border-left-color: #000000;
-	border-right-style: solid;
-	border-right-width: 2px;
-	border-right-color: #000000;
-	border-top-style: solid;
-	border-top-width: 2px;
-	border-top-color: #000000;
-	border-bottom-style: solid;
-	border-bottom-width: 2px;
-	border-bottom-color: #000000;
+	background-color: #ccdae9;
+	padding: 10px;
+	border: 1px solid #aaa;
+	border-left: 5px solid #0a9c4a;
 }
 
 code
@@ -774,112 +745,35 @@ b
 	font-style: normal;
 }
 
-.btn
+/*Next and Previous Buttons*/
+input.greenbutton
 {
-	width: 70px;
-	height: 25px;
-	text-align: center;
-	padding-left: 20px;
-	color: white;
-	vertical-align: middle;
-	background-color: rgba(0,0,0,.35);
-	background-image: url(../Images/_DocAssets/copyIcon.png);
-	background-repeat: no-repeat;
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: #343E48;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-right-color: #343E48;
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-top-color: #343E48;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: #343E48;
-	border-radius: 5px;
-	margin-left: 20px;
-	margin-top: 1px;
-	margin-right: 1px;
-	transition: .2s;
+      background-color: #7ED13B; 
+      color: white;
+      border: none;
+      height: 30px;
+      width: 120px;
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Poppins Light';
+      cursor: pointer;
+      border-radius: 16px;
+      left: 50%;
 }
-
-.btn:hover
-{
-	box-shadow: 0px 0px 2px 2px white;
-	background-color: rgba(0,0,0,.54);
-	transition: .2s;
-}
-
-.btnOnClick
-{
-	width: 70px;
-	height: 25px;
-	color: white;
-	border-radius: 5px;
-	vertical-align: middle;
-	text-align: right;
-	background-color: rgba(0,0,0,.35);
-	background-image: url(../Images/_DocAssets/copyDone.png);
-	background-repeat: no-repeat;
-	border-left-style: solid;
-	border-left-width: 1px;
-	border-left-color: #343E48;
-	border-right-style: solid;
-	border-right-width: 1px;
-	border-right-color: #343E48;
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-top-color: #343E48;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	border-bottom-color: #343E48;
-	margin-left: 20px;
-	margin-top: 1px;
-	margin-right: 1px;
-	transition: .2s;
-}
-
-.btnOnClick:hover
-{
-	box-shadow: 0px 0px 2px 2px white;
-	background-color: rgba(0,0,0,.54);
-	transition: .2s;
-}
-
-input.nextbutton
-{
-background-color: #7ED13B; 
-color: white;
-border: none;
-height: 30px;
-width: 120px;
-text-decoration: none;
-text-align: center;
-font-family: 'Poppins Light';
-cursor: pointer;
-border-radius: 16px;
-}
-
-input.nextbutton:hover
-{
-	background-color: #9bed5a;
+.greenbutton:hover {
+  background-color: #9bed5a;
+  
 }
 
 input.greybutton
 {
-background-color: #A9A9A9;
-color: white;
-border: none;
-height: 30px;
-width: 120px;
-text-decoration: none;
-text-align: center;
-font-family: 'Poppins Light';
-border-radius: 16px;
-}
-
-p.buttonContainer
-{
-	text-align: center;
+background-color: #A9A9A9; 
+      color: white;
+      border: none;
+      height: 30px;
+      width: 120px;
+      text-decoration: none;
+      text-align: center;
+      font-family: 'Poppins Light';
+      border-radius: 16px;
 }
