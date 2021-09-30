@@ -22,3 +22,7 @@
   need to be transformed to:
 
   https://opensource.hcltechsw.com/volt-mx-docs/docs/documentation/Foundry/voltmx_foundry_user_guide/Content/Services.html
+
+* I put the JS and CSS files in docs/marketplace/resources and adjusted paths in the HTML as needed. All the files seem to be found, but I'm seeing "uncaught exception" errors from require.js and MadCapAll.js.
+
+* I downloaded Poppins-Light.woff and Poppins-Light.woff2 to the resources folder. These are free fonts.
